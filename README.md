@@ -12,7 +12,7 @@
 - [X] Empty Google Drive trash.
 - [X] youtube-dl support.
 
-## ToDo 
+## ToDo
 - [ ] Handle more exceptions.
 - [ ] LOGGER support.
 - [ ] Service account support.
@@ -21,7 +21,7 @@
 ## Deploying
 
 ### Deploy on [Heroku](https://heroku.com)
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/viperadnan-git/google-drive-telegram-bot/tree/master)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/risspect/Gdrive-uploader-bot-telegram/tree/master)
 
 ### Installation
 - Install required modules.
@@ -29,15 +29,15 @@
 apt install -y git python3 ffmpeg
 ```
 - Clone this git repository.
-```sh 
+```sh
 git clone https://github.com/viperadnan-git/google-drive-telegram-bot
 ```
 - Change Directory
-```sh 
+```sh
 cd google-drive-telegram-bot
 ```
 - Install requirements with pip3
-```sh 
+```sh
 pip3 install -r requirements.txt
 ```
 
@@ -55,8 +55,8 @@ pip3 install -r requirements.txt
 - `DATABASE_URL` - Postgres database url.
 - `DOWNLOAD_DIRECTORY` - Custom path for downloads. Must end with a forward `/` slash. (Default to `./downloads/`)
 
-### Deploy 
-```sh 
+### Deploy
+```sh
 python3 -m bot
 ```
 
