@@ -60,7 +60,7 @@ async def _revoke(client, message):
     message.reply_text(f"**ERROR:** ```{e}```", quote=True)
 
 
-@Client.on_message(filters.private & filters.incoming & filters.text & CustomFilters.auth_users)
+@Client.on_message(filters.private & filters.incoming & filters.command(BotCommands.Authorize))
 async def _token(client, message):
   token = message.text.split()[-1]
   WORD = len(token)
