@@ -50,7 +50,7 @@ async def _auth(client, message):
       await message.reply_text(f"**ERROR:** ```{e}```", quote=True)
 
 @Client.on_message(filters.private & filters.incoming & filters.command(BotCommands.Revoke) & CustomFilters.auth_users)
-async def _revoke(client, message):
+def _revoke(client, message):
   user_id = message.from_user.id
   try:
     gDriveDB._clear(user_id)
@@ -59,11 +59,12 @@ async def _revoke(client, message):
   except Exception as e:
     message.reply_text(f"**ERROR:** ```{e}```", quote=True)
 
+
 @Client.on_message(filters.private & filters.incoming & filters.text & ~CustomFilters.auth_users)
 async def _token(client, message):
   token = message.text.split()[-1]
   WORD = len(token)
-  if WORD == 57 and token[1] == "/":
+  if WORD == 62 and token[1] == "/":
     creds = None
     global flow
     if flow:
