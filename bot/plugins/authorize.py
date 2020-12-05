@@ -50,7 +50,7 @@ async def _auth(client, message):
       await message.reply_text(f"**ERROR:** ```{e}```", quote=True)
 
 @Client.on_message(filters.private & filters.incoming & filters.command(BotCommands.Revoke) & CustomFilters.auth_users)
-def _revoke(client, message):
+async def _revoke(client, message):
   user_id = message.from_user.id
   try:
     gDriveDB._clear(user_id)
